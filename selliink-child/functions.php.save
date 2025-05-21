@@ -1,0 +1,8 @@
+K<?php
+/**
+ * Enqueue parent and child theme styles
+ */
+function selliink_child_enqueue_styles() {
+  wp_enqueue_style( 'selliink-parent', get_template_directory_uri() . '/style.css' );
+}
+add_action( 'wp_enqueue_scripts', 'selliink_child_enqueue_styles' );
